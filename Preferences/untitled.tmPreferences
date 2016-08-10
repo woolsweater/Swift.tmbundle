@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>XCTAssert completions</string>
+	<key>scope</key>
+	<string>source.swift</string>
+	<key>settings</key>
+	<dict>
+		<key>completions</key>
+		<array>
+			<string>XCTAssert</string>
+			<string>XCTAssertEqual</string>
+			<string>XCTAssertFalse</string>
+			<string>XCTAssertThrowsError</string>
+			<string>XCTAssertEqualWithAccuracy</string>
+			<string>XCTAssertNotEqual</string>
+			<string>XCTAssertNotNil</string>
+			<string>XCTAssertNil</string>
+			<string>XCTAssertNotEqualWithAccuracy</string>
+			<string>XCTAssertLessThan</string>
+			<string>XCTAssertGreaterThan</string>
+			<string>XCTAssertGreaterThanWithAccuracy</string>
+			<string>XCTAssertLessThanWithAccuracy</string>
+		</array>
+	</dict>
+	<key>uuid</key>
+	<string>A8405B40-E804-42D5-B33B-2E18CBA159D4</string>
+</dict>
+</plist>

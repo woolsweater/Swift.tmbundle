@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>func ${1:==}(lhs: ${2:Type}, rhs: ${2:Type}) -&gt; ${3:Bool}
+{
+    return lhs.${4:field} ${1:operator} rhs.${4:field}
+}</string>
+	<key>name</key>
+	<string>Compare func</string>
+	<key>scope</key>
+	<string>source.swift</string>
+	<key>tabTrigger</key>
+	<string>==</string>
+	<key>uuid</key>
+	<string>256DDA25-E439-4334-939F-91B30D330BED</string>
+</dict>
+</plist>

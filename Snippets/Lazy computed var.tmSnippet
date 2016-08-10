@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>lazy var ${1:name}: ${2:type} = {
+    $3
+    return $4
+}()</string>
+	<key>name</key>
+	<string>Lazy computed var</string>
+	<key>scope</key>
+	<string>source.swift</string>
+	<key>tabTrigger</key>
+	<string>lazycomp</string>
+	<key>uuid</key>
+	<string>97B20D2D-668C-457E-BF70-0704C9C44198</string>
+</dict>
+</plist>

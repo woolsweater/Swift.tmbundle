@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>import PackageDescription
+
+let package = Package(
+  name: "$1",
+  dependencies: [
+    $2
+  ]
+)
+</string>
+	<key>name</key>
+	<string>Package description</string>
+	<key>scope</key>
+	<string>source.swift</string>
+	<key>tabTrigger</key>
+	<string>pkgdesc</string>
+	<key>uuid</key>
+	<string>23C8E0C3-831E-471C-AF5B-FE2E1AC8BE2F</string>
+</dict>
+</plist>
