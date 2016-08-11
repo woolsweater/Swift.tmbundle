@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>func ${1:name}(${2:arguments}) ${3/\w+\??/(?0:-&gt;)/} ${3:ReturnType} 
+	<string>func ${1:name}(${2:arguments})${3/.+/(?0: -&gt; )/}${3:ReturnType}
 {
 	$4
 }</string>

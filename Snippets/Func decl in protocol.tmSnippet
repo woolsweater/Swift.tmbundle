@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>func $1($2)${3/\w+\??/(?0: -&gt; )/}${3:ReturnType}</string>
+	<string>func $1($2)${3/.+/(?0: -&gt; )/}${3:ReturnType}</string>
 	<key>name</key>
 	<string>Func decl in protocol</string>
 	<key>scope</key>
