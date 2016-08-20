@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>mainMenu</key>
+	<dict>
+		<key>excludedItems</key>
+		<array>
+			<string>6633E5E8-3D4D-489F-9CE7-6C02D0A64350</string>
+		</array>
+	</dict>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>

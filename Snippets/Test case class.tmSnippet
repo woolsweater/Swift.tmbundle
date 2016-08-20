@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>class ${1:Tests}: XCTestCase {
-    
+
     func test$3() {
         $4
     }
