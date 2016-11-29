@@ -7,8 +7,7 @@
 	<key>command</key>
 	<string>#!/usr/local/bin/gsed -rf
 s/(.*\S)\s+$/\1/
-$ a\
-</string>
+$ a\</string>
 	<key>input</key>
 	<string>document</string>
 	<key>inputFormat</key>
