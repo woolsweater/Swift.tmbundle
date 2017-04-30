@@ -3,21 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:Tests}: XCTestCase
-{
-    func test$3()
-    {
-        $4
-    }
-}
-</string>
+	<string>func ${1:name}(${2:arguments})${3/.+/(?0: -&gt; )/}${3:ReturnType} {
+	$4
+}</string>
 	<key>name</key>
-	<string>Test case class Allman</string>
+	<string>function</string>
 	<key>scope</key>
 	<string>source.swift</string>
 	<key>tabTrigger</key>
-	<string>testclass</string>
+	<string>func</string>
 	<key>uuid</key>
-	<string>54137879-CF3C-42F1-8B4A-B6917F3F0868</string>
+	<string>7943C3EA-442B-476B-BCE6-49EF59344581</string>
 </dict>
 </plist>

@@ -3,21 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:Tests}: XCTestCase
-{
-    func test$3()
-    {
-        $4
-    }
-}
-</string>
+	<string>XCTFail(); ${1:return}</string>
 	<key>name</key>
-	<string>Test case class Allman</string>
+	<string>XCTFail</string>
 	<key>scope</key>
 	<string>source.swift</string>
 	<key>tabTrigger</key>
-	<string>testclass</string>
+	<string>fail</string>
 	<key>uuid</key>
-	<string>54137879-CF3C-42F1-8B4A-B6917F3F0868</string>
+	<string>65F4E869-0463-4FD6-9012-E6A28E35480E</string>
 </dict>
 </plist>

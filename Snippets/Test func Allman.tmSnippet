@@ -3,14 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>func test$1()
+	<string>/**
+ * $1
+ */
+func test$2()
 {
-    $2
+    $3
 }</string>
 	<key>name</key>
 	<string>Test func Allman</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.type.class.swift</string>
 	<key>tabTrigger</key>
 	<string>test</string>
 	<key>uuid</key>

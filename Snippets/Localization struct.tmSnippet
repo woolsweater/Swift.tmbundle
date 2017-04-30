@@ -3,21 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:Tests}: XCTestCase
-{
-    func test$3()
-    {
-        $4
+	<string>extension ${1:${TM_FILENAME/([^.]+).swift/$1/}} {
+    fileprivate struct Localization {
+        /** $2 */
+        static let $3 = localizedString("$TM_FILENAME: $4")
     }
-}
-</string>
+}</string>
 	<key>name</key>
-	<string>Test case class Allman</string>
+	<string>Localization struct</string>
 	<key>scope</key>
 	<string>source.swift</string>
 	<key>tabTrigger</key>
-	<string>testclass</string>
+	<string>localization</string>
 	<key>uuid</key>
-	<string>54137879-CF3C-42F1-8B4A-B6917F3F0868</string>
+	<string>DDD6C7D1-B8C4-40E7-A53C-A5055C2692CC</string>
 </dict>
 </plist>

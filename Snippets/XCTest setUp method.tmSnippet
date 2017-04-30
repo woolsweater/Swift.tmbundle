@@ -3,21 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:Tests}: XCTestCase
-{
-    func test$3()
-    {
-        $4
-    }
-}
-</string>
+	<string>override func setUp() {
+    super.setUp()
+    $1
+}</string>
 	<key>name</key>
-	<string>Test case class Allman</string>
+	<string>XCTest setUp method</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.type.class.swift</string>
 	<key>tabTrigger</key>
-	<string>testclass</string>
+	<string>setup</string>
 	<key>uuid</key>
-	<string>54137879-CF3C-42F1-8B4A-B6917F3F0868</string>
+	<string>82B1D1BB-2B0C-4F61-8C1A-DD6D5F13A815</string>
 </dict>
 </plist>

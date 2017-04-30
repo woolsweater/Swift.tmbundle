@@ -3,21 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:Tests}: XCTestCase
-{
-    func test$3()
-    {
-        $4
-    }
-}
-</string>
+	<string>switch self {
+    case .$1:
+        $2
+}</string>
 	<key>name</key>
-	<string>Test case class Allman</string>
+	<string>Enum property switch</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.type.enum.swift</string>
 	<key>tabTrigger</key>
-	<string>testclass</string>
+	<string>eswitch</string>
 	<key>uuid</key>
-	<string>54137879-CF3C-42F1-8B4A-B6917F3F0868</string>
+	<string>0B5AADC8-1890-4F1D-879F-82DE81EFA7E6</string>
 </dict>
 </plist>

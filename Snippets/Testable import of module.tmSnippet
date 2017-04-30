@@ -3,21 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:Tests}: XCTestCase
-{
-    func test$3()
-    {
-        $4
-    }
-}
-</string>
+	<string>@testable import ${SWIFT_TESTS_MODULE_NAME:$1}</string>
 	<key>name</key>
-	<string>Test case class Allman</string>
+	<string>Testable import of module</string>
 	<key>scope</key>
 	<string>source.swift</string>
 	<key>tabTrigger</key>
-	<string>testclass</string>
+	<string>testable</string>
 	<key>uuid</key>
-	<string>54137879-CF3C-42F1-8B4A-B6917F3F0868</string>
+	<string>0932FB93-11D4-4CA8-90DE-B4D523AE6D49</string>
 </dict>
 </plist>

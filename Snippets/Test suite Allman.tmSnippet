@@ -4,13 +4,16 @@
 <dict>
 	<key>content</key>
 	<string>import XCTest
-@testable import ${1:module}
+@testable import ${SWIFT_TESTS_MODULE_NAME:$1}
 
 class ${2:${TM_FILENAME/([^.]+).swift/$1/}} : XCTestCase
 {
+    /**
+     * $4
+     */
     func test$3()
     {
-        $4
+        $5
     }
 }
 </string>
