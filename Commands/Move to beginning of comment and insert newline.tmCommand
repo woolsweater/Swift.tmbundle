@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+from os import environ
+import sys
+
+COMMENT_START = environ["TM_COMMENT_BLOCK_START"]
+CURRENT_COLUMN = int(environ["TM_COLUMN_NUMBER"])
+
+line = sys.stdin.read()
+
+line = "{}$0{}".format(line[:CURRENT_COLUMN-1], line[CURRENT_COLUMN-1:])
+
+partitioned = line.partition(COMMENT_START)
+head = partitioned[0] + partitioned[1]
+body = partitioned[2]
+
+newline = '\n' if head != "" else ''
+
+line = "{}{}{}".format(head, newline, body)
+
+sys.stdout.write(line)
+</string>
+	<key>input</key>
+	<string>line</string>
+	<key>keyEquivalent</key>
+	<string>^~@</string>
+	<key>name</key>
+	<string>Move to beginning of comment and insert newline</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>scope</key>
+	<string>comment.block.swift, comment.block.documentation.swift</string>
+	<key>uuid</key>
+	<string>B543780B-EBDE-4E71-BC71-A91396AD3F60</string>
+</dict>
+</plist>
