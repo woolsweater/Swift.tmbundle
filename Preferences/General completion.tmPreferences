@@ -3,13 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>XCTAssert completions</string>
+	<string>Keywords</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.function.body.swift</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>
 		<array>
+			<string>true</string>
+			<string>false</string>
+			<string>fallthrough</string>
+			<string>continue</string>
+			<string>return</string>
+			<string>default</string>
 			<string>XCTAssert</string>
 			<string>XCTAssertEqual</string>
 			<string>XCTAssertFalse</string>
@@ -27,6 +33,6 @@
 		</array>
 	</dict>
 	<key>uuid</key>
-	<string>D0BACD38-BFCE-4960-9B26-1AAE9A053F24</string>
+	<string>EBE261F6-879A-4A0C-8756-CE9803D3BD02</string>
 </dict>
 </plist>

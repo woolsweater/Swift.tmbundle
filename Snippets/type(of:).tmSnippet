@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>XCTFail()${1/^(return|continue|break)$|^(\n.+)/(?1:; )/}${1:return}</string>
+	<string>type(of: $1)</string>
 	<key>name</key>
-	<string>XCTFail</string>
+	<string>type(of:)</string>
 	<key>scope</key>
-	<string>meta.definition.function.body.swift</string>
+	<string>source.swift</string>
 	<key>tabTrigger</key>
-	<string>fail</string>
+	<string>type</string>
 	<key>uuid</key>
-	<string>65F4E869-0463-4FD6-9012-E6A28E35480E</string>
+	<string>D3A744D4-FA2F-4CF9-AB54-D7E9214D3DDB</string>
 </dict>
 </plist>

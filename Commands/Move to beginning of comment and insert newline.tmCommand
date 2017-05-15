@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>#!/usr/bin/env python
+
+from os import environ
+import sys
+
+try:
+    COMMENT_START = environ["TM_COMMENT_BLOCK_START"]
+except KeyError:
+    sys.stderr.write("No value for $TM_COMMENT_BLOCK_START")
+    sys.exit(-1)
+    
+CURRENT_COLUMN = int(environ["TM_LINE_INDEX"])
+
+line = sys.stdin.read()
+
+line = "{}$0{}".format(line[:CURRENT_COLUMN], line[CURRENT_COLUMN:])
+
+partitioned = line.partition(COMMENT_START)
+head = partitioned[0] + partitioned[1]
+body = partitioned[2]
+
+newline = '\n' if len(head) &gt; 0 else ''
+indent_string = ' ' * int(environ["TM_TAB_SIZE"])
+if not bool(environ["TM_SOFT_TABS"]):
+    indent_string = '\t'
+whitespace = "{}{}".format(newline, indent_string)
+
+line = "{}{}{}".format(head, whitespace, body)
+
+sys.stdout.write(line)
+</string>
+	<key>input</key>
+	<string>line</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>^~@
+</string>
+	<key>name</key>
+	<string>Move to beginning of comment and insert newline</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>snippet</string>
+	<key>outputLocation</key>
+	<string>replaceInput</string>
+	<key>scope</key>
+	<string>comment.block.swift, comment.block.documentation.swift</string>
+	<key>uuid</key>
+	<string>B543780B-EBDE-4E71-BC71-A91396AD3F60</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -3,14 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>XCTFail()${1/^(return|continue|break)$|^(\n.+)/(?1:; )/}${1:return}</string>
+	<string>override func tearDown() {
+    $1
+    super.tearDown()
+}</string>
 	<key>name</key>
-	<string>XCTFail</string>
+	<string>XCTest tearDown method</string>
 	<key>scope</key>
-	<string>meta.definition.function.body.swift</string>
+	<string>source.swift</string>
 	<key>tabTrigger</key>
-	<string>fail</string>
+	<string>teardown</string>
 	<key>uuid</key>
-	<string>65F4E869-0463-4FD6-9012-E6A28E35480E</string>
+	<string>0E96790A-7F20-4235-B83B-2703FE679FE8</string>
 </dict>
 </plist>

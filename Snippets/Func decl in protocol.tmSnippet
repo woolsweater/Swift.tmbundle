@@ -10,9 +10,9 @@ func $2($3)${4/.+/(?0: -&gt; )/}${4:ReturnType}</string>
 	<key>name</key>
 	<string>Func decl in protocol</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.type.protocol.swift</string>
 	<key>tabTrigger</key>
-	<string>funcdec</string>
+	<string>func</string>
 	<key>uuid</key>
 	<string>9D70BE1D-C3A3-4D64-9A32-C3ED97E3110C</string>
 </dict>

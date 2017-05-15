@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import ${1|Foundation,UIKit,$SWIFT_TESTS_MODULE_NAME,$SWIFT_MODULE_NAME|}</string>
+	<string>import ${1|Foundation,UIKit,$SWIFT_MODULE_NAME,$SWIFT_TESTS_MODULE_NAME|}</string>
 	<key>name</key>
 	<string>Import</string>
 	<key>scope</key>

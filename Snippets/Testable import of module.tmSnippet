@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@testable import ${SWIFT_TESTS_MODULE_NAME:$1}</string>
+	<string>@testable import ${SWIFT_TESTS_MODULE_NAME}</string>
 	<key>name</key>
 	<string>Testable import of module</string>
 	<key>scope</key>
