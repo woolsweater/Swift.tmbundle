@@ -22,15 +22,12 @@ line = sys.stdin.read()
 
 line = "{}$0{}".format(line[:CURRENT_COLUMN], line[CURRENT_COLUMN:])
 
-partitioned = line.partition(COMMENT_START)
-head = partitioned[0] + partitioned[1]
-body = partitioned[2]
+indent, comment_marker, body = line.partition(COMMENT_START)
+head = indent + comment_marker
+# Escape backticks to prevent attempted shell evaluation
+body = body.replace("`", "\`")
 
-newline = '\n' if len(head) &gt; 0 else ''
-indent_string = ' ' * int(environ["TM_TAB_SIZE"])
-if not bool(environ["TM_SOFT_TABS"]):
-    indent_string = '\t'
-whitespace = "{}{}".format(newline, indent_string)
+whitespace = '\n' + indent if len(head) &gt; 0 else ''
 
 line = "{}{}{}".format(head, whitespace, body)
 
@@ -41,8 +38,7 @@ sys.stdout.write(line)
 	<key>inputFormat</key>
 	<string>text</string>
 	<key>keyEquivalent</key>
-	<string>^~@
-</string>
+	<string>^~@</string>
 	<key>name</key>
 	<string>Move to beginning of comment and insert newline</string>
 	<key>outputCaret</key>
