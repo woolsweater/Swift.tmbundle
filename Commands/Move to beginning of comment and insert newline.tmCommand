@@ -15,6 +15,11 @@ try:
 except KeyError:
     sys.stderr.write("No value for $TM_COMMENT_BLOCK_START")
     sys.exit(-1)
+
+try:
+    COMMENT_CONT = environ["TM_COMMENT_BLOCK_CONTINUE"]
+except KeyError:
+    COMMENT_CONT = ""
     
 CURRENT_COLUMN = int(environ["TM_LINE_INDEX"])
 
@@ -28,8 +33,9 @@ head = indent + comment_marker
 body = body.replace("`", "\`")
 
 whitespace = '\n' + indent if len(head) &gt; 0 else ''
+comment_continue = COMMENT_CONT if len(whitespace) &gt; 0 else ''
 
-line = "{}{}{}".format(head, whitespace, body)
+line = "{}{}{}{}".format(head, whitespace, comment_continue, body)
 
 sys.stdout.write(line)
 </string>
