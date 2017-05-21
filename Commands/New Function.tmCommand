@@ -12,7 +12,7 @@ require ENV['TM_SUPPORT_PATH'] + '/lib/escape'
 
 input = STDIN.read
 puts %Q{\
-func #{e_sn input}(${1:with arg: Type})${2/.+/ /m}${2:${1/.*\\b(throws)\\b.*|.*/(?1:re)/m}throws}${3/.+/ -&gt; /m}${3:ReturnType} {
+func #{e_sn input}(${1:with arg: Type})${2/.+/ /m}${2:${1/.*\\b(throws)\\b.*|.*/(?1:re)/m}throws}${3/.+/ -&gt; /m}${3:ReturnType}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
     $4
 }\
 }

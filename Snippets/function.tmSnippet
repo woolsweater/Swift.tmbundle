@@ -6,6 +6,8 @@
 	<string>func ${1:name}(${2:arguments})${3/.+/(?0: -&gt; )/}${3:ReturnType} {
 	$4
 }</string>
+	<key>isDisabled</key>
+	<true/>
 	<key>name</key>
 	<string>function</string>
 	<key>scope</key>

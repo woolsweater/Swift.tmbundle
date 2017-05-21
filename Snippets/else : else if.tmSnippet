@@ -5,15 +5,13 @@
 	<key>changed</key>
 	<dict>
 		<key>content</key>
-		<string>protocol ${1:Miscible}${2/.*(\S).*|.*/(?1:\: )/m}${2:ConformsTo} {
-	$3
+		<string>else${1/.*(\S).*|.*/(?1: if )/m}${1:condition}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	$2
 }</string>
-		<key>isDisabled</key>
-		<true/>
 	</dict>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
-	<string>1E0BBD65-5086-44AC-BDCF-F3AA95B9E35E</string>
+	<string>3A6272EA-780F-45F9-992C-220BFD13F430</string>
 </dict>
 </plist>

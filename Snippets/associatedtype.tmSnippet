@@ -4,16 +4,12 @@
 <dict>
 	<key>changed</key>
 	<dict>
-		<key>content</key>
-		<string>protocol ${1:Miscible}${2/.*(\S).*|.*/(?1:\: )/m}${2:ConformsTo} {
-	$3
-}</string>
 		<key>isDisabled</key>
 		<true/>
 	</dict>
 	<key>isDelta</key>
 	<true/>
 	<key>uuid</key>
-	<string>1E0BBD65-5086-44AC-BDCF-F3AA95B9E35E</string>
+	<string>42893CE6-0D28-434E-9775-AA4D9E1C56B5</string>
 </dict>
 </plist>

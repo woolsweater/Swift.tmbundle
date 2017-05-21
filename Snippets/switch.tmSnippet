@@ -5,10 +5,12 @@
 	<key>changed</key>
 	<dict>
 		<key>content</key>
-		<string>switch ${1:value} {
+		<string>switch ${1:value}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
     case ${2:pattern}:
     	$3
 }</string>
+		<key>tabTrigger</key>
+		<string>switch</string>
 	</dict>
 	<key>isDelta</key>
 	<true/>

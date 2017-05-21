@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@IBAction func ${1:name}(${2:sender}${2/.+/(?0:\: Any?)/}) {
+	<string>@IBAction func ${1:name}(${2:sender}${2/.+/(?0:\: Any?)/})${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
 	$3
 }</string>
 	<key>name</key>

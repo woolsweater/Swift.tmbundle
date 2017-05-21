@@ -6,18 +6,15 @@
 	<string>import XCTest
 @testable import ${SWIFT_TESTS_MODULE_NAME:$1}
 
-class ${2:${TM_FILENAME/([^.]+).swift/$1/}} : XCTestCase {
-
+class ${2:${TM_FILENAME/([^.]+).swift/$1/}} : XCTestCase${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
     /**
      ${4:Test that}
      */
-    func test$3() {
+    func test$3()${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n    )/i}{
         $5
     }
 }
 </string>
-	<key>isDisabled</key>
-	<true/>
 	<key>name</key>
 	<string>Test suite</string>
 	<key>scope</key>

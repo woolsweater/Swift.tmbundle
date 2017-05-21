@@ -3,15 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${1:Tests}: XCTestCase {
-
-    func test$3() {
+	<string>class ${1:${TM_FILENAME/([^.]+).swift/$1/}} : XCTestCase${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
+    /** $3 */
+    func test$2()${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n    )/i}{
         $4
     }
 }
+
 </string>
-	<key>isDisabled</key>
-	<true/>
 	<key>name</key>
 	<string>Test case class</string>
 	<key>scope</key>
