@@ -5,37 +5,46 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>#!/usr/bin/env python
+	<string>#!/usr/bin/env python3
 
 from os import environ
 import sys
 
 try:
-    COMMENT_START = environ["TM_COMMENT_BLOCK_START"]
+    COMMENT_START = environ["TM_WSS_COMMENT_BLOCK_START"]
 except KeyError:
-    sys.stderr.write("No value for $TM_COMMENT_BLOCK_START")
+    sys.stderr.write("No value for $TM_WSS_COMMENT_BLOCK_START")
+    sys.exit(-1)
+    
+try:
+    COMMENT_END = environ["TM_WSS_COMMENT_BLOCK_END"]
+except KeyError:
+    sys.stderr.write("No value for $TM_WSS_COMMENT_BLOCK_END")
     sys.exit(-1)
 
 try:
-    COMMENT_CONT = environ["TM_COMMENT_BLOCK_CONTINUE"]
+    COMMENT_CONT = environ["TM_WSS_COMMENT_BLOCK_CONTINUE"]
 except KeyError:
     COMMENT_CONT = ""
     
 CURRENT_COLUMN = int(environ["TM_LINE_INDEX"])
 
 line = sys.stdin.read()
+# Insert snippet placeholder for the current caret position
+before, after = line[:CURRENT_COLUMN], line[CURRENT_COLUMN:]
+line = f"{before}$0{after}"
 
-line = "{}$0{}".format(line[:CURRENT_COLUMN], line[CURRENT_COLUMN:])
-
-indent, comment_marker, body = line.partition(COMMENT_START)
-head = indent + comment_marker
+indent, comment_start, body = line.partition(COMMENT_START)
+head = indent + comment_start
+#!!! Assume 1) space at end of text 2) the end marker should be indented
+body, comment_end, _ = body.partition(' ' + COMMENT_END)
 # Escape backticks to prevent attempted shell evaluation
 body = body.replace("`", "\`")
 
 whitespace = '\n' + indent if len(head) &gt; 0 else ''
 comment_continue = COMMENT_CONT if len(whitespace) &gt; 0 else ''
 
-line = "{}{}{}{}".format(head, whitespace, comment_continue, body)
+line = f"{head}{whitespace}{comment_continue}{body}{whitespace}{comment_end}"
 
 sys.stdout.write(line)
 </string>
@@ -46,7 +55,7 @@ sys.stdout.write(line)
 	<key>keyEquivalent</key>
 	<string>^~@</string>
 	<key>name</key>
-	<string>Move to beginning of comment and insert newline</string>
+	<string>Insert newlines in comment</string>
 	<key>outputCaret</key>
 	<string>afterOutput</string>
 	<key>outputFormat</key>
