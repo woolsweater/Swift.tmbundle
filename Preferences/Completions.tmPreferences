@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>At-Completions</string>
+	<string>At and Type Completions</string>
 	<key>scope</key>
 	<string>source.swift &amp; meta.definition</string>
 	<key>settings</key>
@@ -13,6 +13,14 @@
 			<string>@discardableResult</string>
 			<string>@escaping</string>
 			<string>@available</string>
+			<string>Any</string>
+			<string>AnyHashable</string>
+			<string>Bool</string>
+			<string>Double</string>
+			<string>Float</string>
+			<string>Int</string>
+			<string>NSObject</string>
+			<string>String</string>
 		</array>
 	</dict>
 	<key>uuid</key>

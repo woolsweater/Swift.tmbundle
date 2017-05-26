@@ -3,21 +3,23 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Keywords</string>
+	<string>Inside function completions</string>
 	<key>scope</key>
-	<string>meta.definition.type.body.swift</string>
+	<string>meta.definition.function.body.swift</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>
 		<array>
-			<string>public</string>
+			<string>true</string>
+			<string>false</string>
+			<string>fallthrough</string>
+			<string>continue</string>
+			<string>return</string>
+			<string>default</string>
 			<string>fileprivate</string>
-			<string>private</string>
-			<string>static</string>
-			<string>class</string>
 		</array>
 	</dict>
 	<key>uuid</key>
-	<string>EBE261F6-879A-4A0C-8756-CE9803D3BD02</string>
+	<string>729E0EA7-4241-4CE6-AF9E-47B00F458A2A</string>
 </dict>
 </plist>

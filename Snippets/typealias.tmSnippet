@@ -4,8 +4,10 @@
 <dict>
 	<key>changed</key>
 	<dict>
-		<key>isDisabled</key>
-		<true/>
+		<key>content</key>
+		<string>typealias $1 = $2</string>
+		<key>tabTrigger</key>
+		<string>alias</string>
 	</dict>
 	<key>isDelta</key>
 	<true/>
