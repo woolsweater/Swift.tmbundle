@@ -8,11 +8,11 @@
 		<array>
 			<dict>
 				<key>include</key>
-				<string>#function</string>
+				<string>#function-test</string>
 			</dict>
 			<dict>
 				<key>include</key>
-				<string>#function-test</string>
+				<string>#function</string>
 			</dict>
 			<dict>
 				<key>include</key>
@@ -47,6 +47,57 @@
 				<string>#typealias</string>
 			</dict>
 		</array>
+		<key>repository.declarations.repository.function-body</key>
+		<dict>
+			<key>begin</key>
+			<string>(?=\{)</string>
+			<key>comment</key>
+			<string>end pattern does not consume because outer function context needs the same character.</string>
+			<key>end</key>
+			<string>(?&lt;=\})</string>
+			<key>name</key>
+			<string>meta.definition.function.body.swift</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
+				</dict>
+			</array>
+		</dict>
+		<key>repository.declarations.repository.function-initializer.end</key>
+		<string>\}|\G$</string>
+		<key>repository.declarations.repository.function-initializer.patterns</key>
+		<array>
+			<dict>
+				<key>include</key>
+				<string>#comments</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#generic-parameter-clause</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#parameter-clause</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\b(?:throws|rethrows)\b</string>
+				<key>name</key>
+				<string>keyword.control.exception.swift</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>Swift 3: generic constraints after the parameters and return type</string>
+				<key>include</key>
+				<string>#generic-where-clause</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#function-body</string>
+			</dict>
+		</array>
 		<key>repository.declarations.repository.function-test</key>
 		<dict>
 			<key>begin</key>
@@ -79,7 +130,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>(?&lt;=\})|$(?# functions in protocol declarations or generated interfaces have no body)</string>
+			<string>\}|\G$(?# functions in protocol declarations or generated interfaces have no body)</string>
 			<key>name</key>
 			<string>meta.definition.function.test.swift</string>
 			<key>patterns</key>
@@ -113,35 +164,26 @@
 					<string>#generic-where-clause</string>
 				</dict>
 				<dict>
-					<key>begin</key>
-					<string>(\{)</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.section.function.test.begin.swift</string>
-						</dict>
-					</dict>
-					<key>end</key>
-					<string>(\})</string>
-					<key>endCaptures</key>
-					<dict>
-						<key>1</key>
-						<dict>
-							<key>name</key>
-							<string>punctuation.section.function.test.end.swift</string>
-						</dict>
-					</dict>
-					<key>name</key>
-					<string>meta.definition.function.test.body.swift</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>$self</string>
-						</dict>
-					</array>
+					<key>include</key>
+					<string>#function-test-body</string>
+				</dict>
+			</array>
+		</dict>
+		<key>repository.declarations.repository.function-test-body</key>
+		<dict>
+			<key>begin</key>
+			<string>(?=\{)</string>
+			<key>comment</key>
+			<string>This is the same as the "function-body" pattern except the scope name.</string>
+			<key>end</key>
+			<string>(?&lt;=\})</string>
+			<key>name</key>
+			<string>meta.definition.function.test.body.swift</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$self</string>
 				</dict>
 			</array>
 		</dict>
@@ -189,6 +231,43 @@
                         \s*
                         (?=\(|&lt;)
                     </string>
+		<key>repository.declarations.repository.function.end</key>
+		<string>\}|\G$(?# functions in protocol declarations or generated interfaces have no body)</string>
+		<key>repository.declarations.repository.function.patterns</key>
+		<array>
+			<dict>
+				<key>include</key>
+				<string>#comments</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#generic-parameter-clause</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#parameter-clause</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#function-result</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\b(?:throws|rethrows)\b</string>
+				<key>name</key>
+				<string>keyword.control.exception.swift</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>Swift 3: generic constraints after the parameters and return type</string>
+				<key>include</key>
+				<string>#generic-where-clause</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#function-body</string>
+			</dict>
+		</array>
 		<key>repository.declarations.repository.import.patterns</key>
 		<array>
 			<dict>
