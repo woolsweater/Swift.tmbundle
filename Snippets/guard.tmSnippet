@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>guard</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.function.body.swift, meta.definition.function.test.body.swift</string>
 	<key>tabTrigger</key>
 	<string>guard</string>
 	<key>uuid</key>

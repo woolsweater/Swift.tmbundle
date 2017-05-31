@@ -16,7 +16,6 @@
 			<string>continue</string>
 			<string>return</string>
 			<string>default</string>
-			<string>fileprivate</string>
 		</array>
 	</dict>
 	<key>uuid</key>

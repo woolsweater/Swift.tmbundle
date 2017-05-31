@@ -10,7 +10,7 @@
 	<key>name</key>
 	<string>XCTest setUp method</string>
 	<key>scope</key>
-	<string>meta.definition.type.class.swift</string>
+	<string>meta.definition.type.class.test.swift</string>
 	<key>tabTrigger</key>
 	<string>setup</string>
 	<key>uuid</key>

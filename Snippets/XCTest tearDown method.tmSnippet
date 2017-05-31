@@ -10,7 +10,7 @@
 	<key>name</key>
 	<string>XCTest tearDown method</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.type.class.test.swift</string>
 	<key>tabTrigger</key>
 	<string>teardown</string>
 	<key>uuid</key>

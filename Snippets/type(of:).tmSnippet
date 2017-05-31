@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>type(of: $1)</string>
+	<string>type(of: ${1:self})</string>
 	<key>name</key>
 	<string>type(of:)</string>
 	<key>scope</key>

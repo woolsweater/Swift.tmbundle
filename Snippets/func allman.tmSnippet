@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>func ${1:name}(${2:arguments})${3/.+/(?0: -&gt; )/}${3:ReturnType}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	<string>func ${1:name}($2)${3/.+/(?0: -&gt; )/}${3:ReturnType}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
 	$4
 }</string>
 	<key>name</key>

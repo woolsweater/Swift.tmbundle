@@ -4,57 +4,12 @@
 <dict>
 	<key>changed</key>
 	<dict>
-		<key>repository.declarations.patterns</key>
-		<array>
-			<dict>
-				<key>include</key>
-				<string>#function-test</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#function</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#function-initializer</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#import</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#operator</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#precedencegroup</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#protocol</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#type</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#extension</string>
-			</dict>
-			<dict>
-				<key>include</key>
-				<string>#typealias</string>
-			</dict>
-		</array>
 		<key>repository.declarations.repository.function-body</key>
 		<dict>
 			<key>begin</key>
-			<string>(?=\{)</string>
-			<key>comment</key>
-			<string>end pattern does not consume because outer function context needs the same character.</string>
+			<string>\{</string>
 			<key>end</key>
-			<string>(?&lt;=\})</string>
+			<string>\}</string>
 			<key>name</key>
 			<string>meta.definition.function.body.swift</string>
 			<key>patterns</key>
@@ -130,7 +85,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>\}|\G$(?# functions in protocol declarations or generated interfaces have no body)</string>
+			<string>(?&lt;=\}|\G$)(?# functions in protocol declarations or generated interfaces have no body)</string>
 			<key>name</key>
 			<string>meta.definition.function.test.swift</string>
 			<key>patterns</key>
@@ -172,11 +127,9 @@
 		<key>repository.declarations.repository.function-test-body</key>
 		<dict>
 			<key>begin</key>
-			<string>(?=\{)</string>
-			<key>comment</key>
-			<string>This is the same as the "function-body" pattern except the scope name.</string>
+			<string>\{</string>
 			<key>end</key>
-			<string>(?&lt;=\})</string>
+			<string>\}</string>
 			<key>name</key>
 			<string>meta.definition.function.test.body.swift</string>
 			<key>patterns</key>
@@ -192,7 +145,7 @@
                         \b
                         (func)
                         \s+
-                        (   (?!test)        # Test methods are picked up by function-test
+                        (   
                             (?&lt;q&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q&gt;)
                           | (?:
                                 (
@@ -232,7 +185,7 @@
                         (?=\(|&lt;)
                     </string>
 		<key>repository.declarations.repository.function.end</key>
-		<string>\}|\G$(?# functions in protocol declarations or generated interfaces have no body)</string>
+		<string>(?&lt;=\}|\G$)(?# functions in protocol declarations or generated interfaces have no body)</string>
 		<key>repository.declarations.repository.function.patterns</key>
 		<array>
 			<dict>
@@ -388,6 +341,183 @@
 						<string>invalid.illegal.character-not-allowed-here.swift</string>
 					</dict>
 				</array>
+			</dict>
+		</array>
+		<key>repository.declarations.repository.type.patterns</key>
+		<array>
+			<dict>
+				<key>begin</key>
+				<string>\b(class(?!\s+(?:func|var|let)\b))\s+((?&lt;q&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q&gt;))(?:\s*:\s*XCTestCase)</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>storage.type.class.swift</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>entity.name.type.class.test.swift</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.identifier.swift</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.identifier.swift</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>(?&lt;=\})</string>
+				<key>name</key>
+				<string>meta.definition.type.class.test.swift</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#comments</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#generic-parameter-clause</string>
+					</dict>
+					<dict>
+						<key>comment</key>
+						<string>Swift 3: generic constraints after the generic param list</string>
+						<key>include</key>
+						<string>#generic-where-clause</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#inheritance-clause</string>
+					</dict>
+					<dict>
+						<key>begin</key>
+						<string>\{</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.type.begin.swift</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>\}</string>
+						<key>endCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.type.end.swift</string>
+							</dict>
+						</dict>
+						<key>name</key>
+						<string>meta.definition.type.body.swift</string>
+						<key>patterns</key>
+						<array>
+							<dict>
+								<key>include</key>
+								<string>#function-test</string>
+							</dict>
+							<dict>
+								<key>include</key>
+								<string>$self</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>\b(class(?!\s+(?:func|var|let)\b)|struct)\s+((?&lt;q&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q&gt;))</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>storage.type.$1.swift</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>entity.name.type.$1.swift</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.identifier.swift</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.identifier.swift</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>(?&lt;=\})</string>
+				<key>name</key>
+				<string>meta.definition.type.$1.swift</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#comments</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#generic-parameter-clause</string>
+					</dict>
+					<dict>
+						<key>comment</key>
+						<string>Swift 3: generic constraints after the generic param list</string>
+						<key>include</key>
+						<string>#generic-where-clause</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#inheritance-clause</string>
+					</dict>
+					<dict>
+						<key>begin</key>
+						<string>\{</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.type.begin.swift</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>\}</string>
+						<key>endCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.type.end.swift</string>
+							</dict>
+						</dict>
+						<key>name</key>
+						<string>meta.definition.type.body.swift</string>
+						<key>patterns</key>
+						<array>
+							<dict>
+								<key>include</key>
+								<string>$self</string>
+							</dict>
+						</array>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#type-enum</string>
 			</dict>
 		</array>
 	</dict>

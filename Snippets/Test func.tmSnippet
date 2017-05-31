@@ -12,7 +12,7 @@ func test$1()${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
 	<key>name</key>
 	<string>Test func</string>
 	<key>scope</key>
-	<string>meta.definition.type.class.swift</string>
+	<string>meta.definition.type.class.test.swift</string>
 	<key>tabTrigger</key>
 	<string>test</string>
 	<key>uuid</key>

@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>XCTAssert</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.function.test.body.swift</string>
 	<key>tabTrigger</key>
 	<string>xcta</string>
 	<key>uuid</key>
