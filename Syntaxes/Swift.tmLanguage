@@ -21,7 +21,7 @@
 			</array>
 		</dict>
 		<key>repository.declarations.repository.function-initializer.end</key>
-		<string>\}|\G$</string>
+		<string>(?&lt;=\}|\G$)</string>
 		<key>repository.declarations.repository.function-initializer.patterns</key>
 		<array>
 			<dict>

@@ -15,6 +15,7 @@
 			<string>fallthrough</string>
 			<string>continue</string>
 			<string>return</string>
+			<string>isEmpty</string>
 			<string>default</string>
 		</array>
 	</dict>
