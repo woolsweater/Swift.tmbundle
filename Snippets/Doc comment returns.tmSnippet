@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string> - remark: $0</string>
+	<string> - returns: $0</string>
 	<key>name</key>
-	<string>Doc comment remark</string>
+	<string>Doc comment returns</string>
 	<key>scope</key>
 	<string>comment.block.documentation.swift, comment.inline.documentation.swift</string>
 	<key>tabTrigger</key>
-	<string>remark</string>
+	<string>returns</string>
 	<key>uuid</key>
-	<string>A8B606DF-B51D-4D41-8DC1-DBF8E351558F</string>
+	<string>7B4508DC-7FC2-47A5-A0F2-50D24CA5DAF9</string>
 </dict>
 </plist>

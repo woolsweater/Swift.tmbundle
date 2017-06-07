@@ -4,8 +4,12 @@
 <dict>
 	<key>changed</key>
 	<dict>
-		<key>isDisabled</key>
-		<true/>
+		<key>content</key>
+		<string>class $1${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	$0
+}</string>
+		<key>tabTrigger</key>
+		<string>class</string>
 	</dict>
 	<key>isDelta</key>
 	<true/>

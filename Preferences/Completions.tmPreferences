@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>At and Type Completions</string>
 	<key>scope</key>
-	<string>source.swift &amp; meta.definition</string>
+	<string>meta.definition</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>
