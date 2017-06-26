@@ -5,11 +5,11 @@
 	<key>changed</key>
 	<dict>
 		<key>content</key>
-		<string>protocol ${1:Miscible}${2/.*(\S).*|.*/(?1:\: )/m}${2:ConformsTo} {
+		<string>protocol ${1:Miscible}${2/.*(\S).*|.*/(?1:\: )/m}${2:ConformsTo}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
 	$3
 }</string>
-		<key>isDisabled</key>
-		<true/>
+		<key>tabTrigger</key>
+		<string>protocol</string>
 	</dict>
 	<key>isDelta</key>
 	<true/>
