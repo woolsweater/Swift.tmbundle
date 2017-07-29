@@ -4,7 +4,7 @@
 <dict>
 	<key>content</key>
 	<string>/**
- ${2:Test that }
+$TM_WSS_COMMENT_BLOCK_CONTINUE ${2:Test that }
  */
 func test$1()${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
     $3
