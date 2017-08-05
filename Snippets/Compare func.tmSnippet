@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>func ${1:==}(lhs: ${2:Type}, rhs: ${2:Type}) -&gt; ${3:Bool}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	<string>func ${1:==}(lhs: ${2:${TM_FILENAME/([^.]+).swift/$1/}}, rhs: $2) -&gt; ${3:Bool}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
     return lhs.${4:field} ${1:operator} rhs.${4:field}
 }</string>
 	<key>name</key>

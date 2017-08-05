@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>required init?(coder _: NSCoder) {
+    fatalError("'init?(coder:)' is not implemented")
+}</string>
+	<key>name</key>
+	<string>initWithCoder:</string>
+	<key>scope</key>
+	<string>meta.definition.type.class &amp; source.swift</string>
+	<key>tabTrigger</key>
+	<string>initcoder</string>
+	<key>uuid</key>
+	<string>5E50AE40-BEF9-42D2-AA26-EABD8D0BA344</string>
+</dict>
+</plist>

@@ -19,6 +19,8 @@ func #{e_sn input}(${1:with arg: Type})${2/.+/ /m}${2:${1/.*\\b(throws)\\b.*|.*/
 </string>
 		<key>inputFormat</key>
 		<string>text</string>
+		<key>isDisabled</key>
+		<true/>
 		<key>name</key>
 		<string>Function with name</string>
 		<key>outputCaret</key>

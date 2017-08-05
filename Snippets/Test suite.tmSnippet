@@ -6,7 +6,7 @@
 	<string>import XCTest
 @testable import ${SWIFT_TESTS_MODULE_NAME:$1}
 
-class ${2:${TM_FILENAME/([^.]+).swift/$1/}} : XCTestCase${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
+class ${2:${TM_FILENAME/([^.+]+)((\+)([^.]+))?.swift/$1(?2:_$4)/}} : XCTestCase${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
     /**
     $TM_WSS_COMMENT_BLOCK_CONTINUE ${4:Test that}
      */

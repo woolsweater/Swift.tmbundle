@@ -3,15 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>/** $3 */
-static let $1 = "$2"</string>
+	<string>defer { $1 }</string>
 	<key>name</key>
-	<string>String constant key</string>
+	<string>defer</string>
 	<key>scope</key>
-	<string>meta.definition.type.body.swift</string>
+	<string>meta.definition.function &amp; source.swift</string>
 	<key>tabTrigger</key>
-	<string>key</string>
+	<string>defer</string>
 	<key>uuid</key>
-	<string>7020290E-B7EC-44ED-8271-88B0D2391658</string>
+	<string>06378B6F-317F-42FF-80E0-181A9938B7A7</string>
 </dict>
 </plist>

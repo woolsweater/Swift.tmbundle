@@ -5,7 +5,7 @@
 	<key>changed</key>
 	<dict>
 		<key>content</key>
-		<string>extension ${2:${TM_FILENAME/([^.]+).swift/$1/}}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+		<string>extension ${1:${TM_FILENAME/([^+.]+)(\+[^.]+)?.swift/$1/}}${2/.+/ : /}${2:Equatable}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
 	$0
 }</string>
 		<key>tabTrigger</key>
