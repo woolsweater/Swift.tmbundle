@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>import ${WSS_UTILITY_MODULE_NAME:?${WSS_SWIFT_MODULE_NAME:?${WSS_SWIFT_TESTS_MODULE_NAME?:${1|Foundation,UIKit,$WSS_UTILITY_MODULE_NAME,$WSS_SWIFT_MODULE_NAME,$WSS_SWIFT_TESTS_MODULE_NAME|}:${1|Foundation,UIKit,$WSS_UTILITY_MODULE_NAME,$WSS_SWIFT_MODULE_NAME|}}:${1|Foundation,UIKit,$WSS_UTILITY_MODULE_NAME|}}:${1|Foundation,UIKit|}}</string>
+	<string>import ${WSS_UTILITY_MODULE_NAME:?${WSS_SWIFT_TESTS_MODULE_NAME:?${WSS_SWIFT_MODULE_NAME:?${1|Foundation,UIKit,$WSS_UTILITY_MODULE_NAME,$WSS_SWIFT_TESTS_MODULE_NAME,$WSS_SWIFT_MODULE_NAME|}:${1|Foundation,UIKit,$WSS_UTILITY_MODULE_NAME,$WSS_SWIFT_TESTS_MODULE_NAME|}}:${1|Foundation,UIKit,$WSS_UTILITY_MODULE_NAME|}}:${1|Foundation,UIKit|}}</string>
 	<key>name</key>
 	<string>Import</string>
 	<key>scope</key>
