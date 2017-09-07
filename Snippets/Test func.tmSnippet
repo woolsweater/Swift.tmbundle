@@ -4,9 +4,9 @@
 <dict>
 	<key>content</key>
 	<string>/**
-$TM_WSS_COMMENT_BLOCK_CONTINUE ${2:Test that }
+$WSS_COMMENT_BLOCK_CONTINUE ${2:Test that }
  */
-func test$1()${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+func test$1()${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
     $3
 }</string>
 	<key>name</key>

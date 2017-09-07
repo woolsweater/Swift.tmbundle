@@ -26,13 +26,13 @@
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>TM_WSS_COMMENT_BLOCK_START</string>
+				<string>WSS_COMMENT_BLOCK_START</string>
 				<key>value</key>
 				<string>/**</string>
 			</dict>
 			<dict>
 				<key>name</key>
-				<string>TM_WSS_COMMENT_BLOCK_END</string>
+				<string>WSS_COMMENT_BLOCK_END</string>
 				<key>value</key>
 				<string>*/</string>
 			</dict>

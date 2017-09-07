@@ -11,19 +11,19 @@ from os import environ
 import sys
 
 try:
-    COMMENT_START = environ["TM_WSS_COMMENT_BLOCK_START"]
+    COMMENT_START = environ["WSS_COMMENT_BLOCK_START"]
 except KeyError:
-    sys.stderr.write("No value for $TM_WSS_COMMENT_BLOCK_START")
+    sys.stderr.write("No value for $WSS_COMMENT_BLOCK_START")
     sys.exit(-1)
     
 try:
-    COMMENT_END = environ["TM_WSS_COMMENT_BLOCK_END"]
+    COMMENT_END = environ["WSS_COMMENT_BLOCK_END"]
 except KeyError:
-    sys.stderr.write("No value for $TM_WSS_COMMENT_BLOCK_END")
+    sys.stderr.write("No value for $WSS_COMMENT_BLOCK_END")
     sys.exit(-1)
 
 try:
-    COMMENT_CONT = environ["TM_WSS_COMMENT_BLOCK_CONTINUE"]
+    COMMENT_CONT = environ["WSS_COMMENT_BLOCK_CONTINUE"]
 except KeyError:
     COMMENT_CONT = ""
     

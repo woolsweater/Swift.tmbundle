@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>switch self${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	<string>switch self${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
     case .$1:
         $2
 }</string>
 	<key>name</key>
 	<string>Enum property switch</string>
 	<key>scope</key>
-	<string>meta.definition.type.enum.swift</string>
+	<string>meta.definition.type.enum.swift,meta.definition.type.extension.swift</string>
 	<key>tabTrigger</key>
 	<string>eswitch</string>
 	<key>uuid</key>

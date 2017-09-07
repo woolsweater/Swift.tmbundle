@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>extension ${1:${TM_FILENAME/([^.]+).swift/$1/}}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
-    fileprivate struct Localization${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	<string>extension ${1:${TM_FILENAME/([^.]+).swift/$1/}}${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+    fileprivate struct Localization${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
         /** $2 */
         static let $3 = localizedString("$TM_FILENAME: $4")
     }

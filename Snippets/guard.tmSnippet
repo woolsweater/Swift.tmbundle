@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>guard ${1:let} else${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	<string>guard ${1:let} else${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
     $2
 }</string>
 	<key>name</key>

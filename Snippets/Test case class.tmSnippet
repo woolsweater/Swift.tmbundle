@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>class ${2:${TM_FILENAME/([^.]+).swift/$1/}} : XCTestCase${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
+	<string>class ${2:${TM_FILENAME/([^.]+).swift/$1/}} : XCTestCase${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
     /**
-    $TM_WSS_COMMENT_BLOCK_CONTINUE ${4:Test that}
+    $WSS_COMMENT_BLOCK_CONTINUE ${4:Test that}
      */
-    func test$3()${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n    )/i}{
+    func test$3()${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n    )/i}{
         $5
     }
 }

@@ -6,7 +6,7 @@
 	<dict>
 		<key>content</key>
 		<string>/**
-$TM_WSS_COMMENT_BLOCK_CONTINUE $1
+$WSS_COMMENT_BLOCK_CONTINUE $1
  */</string>
 		<key>tabTrigger</key>
 		<string>***</string>

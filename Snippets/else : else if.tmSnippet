@@ -5,7 +5,7 @@
 	<key>changed</key>
 	<dict>
 		<key>content</key>
-		<string>else${1/.*(\S).*|.*/(?1: if )/m}${1:condition}${TM_WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+		<string>else${1/.*(\S).*|.*/(?1: if )/m}${1:condition}${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
 	$2
 }</string>
 	</dict>
