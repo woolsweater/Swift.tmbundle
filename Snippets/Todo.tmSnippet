@@ -5,7 +5,7 @@
 	<key>changed</key>
 	<dict>
 		<key>content</key>
-		<string>//TODO: </string>
+		<string>//TODO${1/.+/(?0:\: )/}${1:Make a box}</string>
 	</dict>
 	<key>isDelta</key>
 	<true/>

@@ -3,14 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@testable import ${WSS_SWIFT_TESTS_MODULE_NAME}</string>
+	<string>/** $1 */
+static let $2 = localizedString("$TM_FILENAME: ${3:$2}")</string>
 	<key>name</key>
-	<string>Testable import of module</string>
+	<string>Localized string constant</string>
 	<key>scope</key>
 	<string>source.swift</string>
 	<key>tabTrigger</key>
-	<string>testable</string>
+	<string>local</string>
 	<key>uuid</key>
-	<string>0932FB93-11D4-4CA8-90DE-B4D523AE6D49</string>
+	<string>D0E0450D-AB02-4BB4-B540-D2E29F353BDF</string>
 </dict>
 </plist>

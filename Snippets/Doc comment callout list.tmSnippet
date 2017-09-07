@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string> - ${1|seealso,important,warning,note,example,attention|}: $0</string>
+	<key>name</key>
+	<string>Doc comment callout list</string>
+	<key>scope</key>
+	<string>comment.block.documentation.swift, comment.inline.documentation.swift</string>
+	<key>tabTrigger</key>
+	<string>callo</string>
+	<key>uuid</key>
+	<string>1F70A8E2-B9CF-4A8C-BC5F-07FECAA91530</string>
+</dict>
+</plist>

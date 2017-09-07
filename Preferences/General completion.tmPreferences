@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Keywords</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>source.swift, meta.definition &amp; source.swift</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>
