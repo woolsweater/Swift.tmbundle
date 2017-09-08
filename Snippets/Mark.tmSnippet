@@ -5,7 +5,7 @@
 	<key>changed</key>
 	<dict>
 		<key>content</key>
-		<string>//MARK: </string>
+		<string>//MARK:${1:- }${2:X}</string>
 	</dict>
 	<key>isDelta</key>
 	<true/>

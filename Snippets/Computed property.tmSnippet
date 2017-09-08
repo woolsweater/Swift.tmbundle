@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>func ${1:name}(${2:arg: ${3:Type}})${4/.+/(?0: -&gt; )/}${4:ReturnType}${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
-	$5
+	<string>var ${1:name}: ${2:Type}${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+    $0
 }</string>
 	<key>name</key>
-	<string>func (incl. Allman)</string>
+	<string>Computed property</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>source.swift &amp; meta.definition.type</string>
 	<key>tabTrigger</key>
-	<string>func</string>
+	<string>cvar</string>
 	<key>uuid</key>
-	<string>17BFEEF6-2365-49BF-A01B-AF6460CFCCF5</string>
+	<string>831F5703-D321-45AF-87AB-9AF5454C5DBC</string>
 </dict>
 </plist>

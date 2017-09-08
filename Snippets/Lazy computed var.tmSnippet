@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>lazy var ${1:name}: ${2:type} = {
+	<string>lazy var ${1:name}: ${2:Type} = {
     $3
     return $4
 }()</string>

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string> - parameter $1: $2</string>
+	<string> - parameter $1: $0</string>
 	<key>name</key>
 	<string>Doc comment parameter</string>
 	<key>scope</key>

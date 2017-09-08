@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>@IBAction func ${1:name}(${2:sender}${2/.+/(?0:\: Any?)/})${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
-	$3
+	<string>@IBAction func ${1:name}(${2:sender: ${3:Any?}})${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+	$4
 }</string>
 	<key>name</key>
 	<string>IBAction</string>

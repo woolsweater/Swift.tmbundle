@@ -3,16 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>func ${1:name}(${2:arg: ${3:Type}})${4/.+/(?0: -&gt; )/}${4:ReturnType}${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
-	$5
+	<string>guard
+    ${1:let ${2:name} = ${3:wrapped}},
+    ${4:let ${5:name} = ${6:wrapped}} else
+{
+    ${7:return}
 }</string>
 	<key>name</key>
-	<string>func (incl. Allman)</string>
+	<string>guard multiline</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>source.swift &amp; meta.definition</string>
 	<key>tabTrigger</key>
-	<string>func</string>
+	<string>guardm</string>
 	<key>uuid</key>
-	<string>17BFEEF6-2365-49BF-A01B-AF6460CFCCF5</string>
+	<string>26795446-BA5F-40E5-8C4B-753C66F89751</string>
 </dict>
 </plist>

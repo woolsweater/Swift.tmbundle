@@ -6,7 +6,7 @@
 	<dict>
 		<key>content</key>
 		<string>enum $1${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
-	$0
+	${2:case $0}
 }</string>
 		<key>tabTrigger</key>
 		<string>enum</string>

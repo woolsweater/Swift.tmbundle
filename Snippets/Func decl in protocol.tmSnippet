@@ -6,7 +6,7 @@
 	<string>/**
 $WSS_COMMENT_BLOCK_CONTINUE $1
  */
-func $2($3)${4/.+/(?0: -&gt; )/}${4:ReturnType}</string>
+func ${2:name}(${3:arg: ${4:Type}})${5/.+/(?0: -&gt; )/}${5:ReturnType}</string>
 	<key>name</key>
 	<string>Func decl in protocol</string>
 	<key>scope</key>

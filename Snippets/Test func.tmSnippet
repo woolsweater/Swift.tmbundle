@@ -4,10 +4,10 @@
 <dict>
 	<key>content</key>
 	<string>/**
-$WSS_COMMENT_BLOCK_CONTINUE ${2:Test that }
+$WSS_COMMENT_BLOCK_CONTINUE ${2:Comment }
  */
 func test$1()${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
-    $3
+    $4
 }</string>
 	<key>name</key>
 	<string>Test func</string>

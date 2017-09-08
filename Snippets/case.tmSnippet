@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>case $1${2/.+/(?0: = )/}${2:raw}</string>
+	<string>case ${1:name}${2/.+/(?0: = )/}${2:raw}</string>
 	<key>name</key>
 	<string>case</string>
 	<key>scope</key>

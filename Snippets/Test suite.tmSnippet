@@ -6,12 +6,13 @@
 	<string>import XCTest
 @testable import ${WSS_SWIFT_TESTS_MODULE_NAME:$1}
 
-class ${2:${TM_FILENAME/([^.+]+)((\+)([^.]+))?.swift/$1(?2:_$4)/}} : ${WSS_TEST_CLASS_BASE_NAME:?${3|WSS_TEST_CLASS_BASE_NAME,XCTestCase|}:XCTestCase}${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
+/** Tests for ${2/([^.+]+)((\+)([^.]+))?Tests/$1(?2:_$4)/} */
+class ${2:${TM_FILENAME/([^.+]+)((\+)([^.]+))?.swift/$1(?2:_$4)/}} : ${WSS_TEST_CLASS_BASE_NAME:?${3|$WSS_TEST_CLASS_BASE_NAME,XCTestCase|}:XCTestCase}${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: {\n:\n{)/i}
     /**
-    $WSS_COMMENT_BLOCK_CONTINUE ${4:Test that}
+    $WSS_COMMENT_BLOCK_CONTINUE ${5:Comment}
      */
-    func test$3()${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n    )/i}{
-        $5
+    func test$4()${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n    )/i}{
+        $6
     }
 }
 </string>
