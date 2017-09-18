@@ -13,7 +13,7 @@
 		<key>symbolTransformation</key>
 		<string>
 		s/\s+/ /g;
-		s/((static|class) )?(var|let)/	$1$3/;
+		s/((static|class) )?(var|let)/	$0/;
 		# Strip initializer if explicit type
 		s/(:\s*[\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?]+)\s*=.*$/$1/;
 		# Infer type if possible

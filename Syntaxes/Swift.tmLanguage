@@ -402,7 +402,7 @@
 		<key>repository.declarations.repository.property</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(?:(static|class)\s+)?(var)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?]+))?\s*(=((?=\s*\{)|\s*\S.*$))?</string>
+			<string>\b(?:(static|class)\s+)?(var)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?!]+))?\s*(=((?=\s*\{)|\s*[^{\s][^{]*$|\s*\S.*?(?=\{)))?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -518,90 +518,88 @@
 			<array>
 				<dict>
 					<key>include</key>
-					<string>#property-computed-getter</string>
+					<string>#property-accessor</string>
 				</dict>
 				<dict>
 					<key>include</key>
-					<string>#property-computed-setter</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#property-observer-willset</string>
-				</dict>
-				<dict>
-					<key>include</key>
-					<string>#property-observer-didset</string>
+					<string>#property-observer</string>
 				</dict>
 			</array>
 			<key>repository</key>
 			<dict>
-				<key>property-computed-getter</key>
+				<key>property-accessor</key>
 				<dict>
 					<key>begin</key>
-					<string>get</string>
+					<string>(get|set)\s*(\{)</string>
 					<key>beginCaptures</key>
 					<dict>
-						<key>0</key>
+						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>storage.type.proprty.$0ter.swift</string>
+							<string>storage.type.property.$1ter.swift</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.property.accessor.begin.swift</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>\}</string>
+					<key>endCaptures</key>
+					<dict>
+						<key>0</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.property.accessor.end.swift</string>
+						</dict>
+					</dict>
 					<key>name</key>
-					<string>meta.definition.property.computed.getter.swift</string>
+					<string>meta.definition.property.computed.$1ter.swift</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>$self</string>
+						</dict>
+					</array>
 				</dict>
-				<key>property-computed-setter</key>
+				<key>property-observer</key>
 				<dict>
 					<key>begin</key>
-					<string>set</string>
+					<string>((did|will)Set)\s*(\{)</string>
 					<key>beginCaptures</key>
 					<dict>
-						<key>0</key>
+						<key>1</key>
 						<dict>
 							<key>name</key>
-							<string>storage.type.property.$0ter.swift</string>
+							<string>storage.type.property.observer.${1:/downcase}.swift</string>
+						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.property.observer.begin.swift</string>
 						</dict>
 					</dict>
 					<key>end</key>
 					<string>\}</string>
-					<key>name</key>
-					<string>meta.definition.property.computed.setter.swift</string>
-				</dict>
-				<key>property-observer-didset</key>
-				<dict>
-					<key>begin</key>
-					<string>didSet</string>
-					<key>beginCaptures</key>
+					<key>endCaptures</key>
 					<dict>
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>storage.type.proprty.observer.${0:/downcase}.swift</string>
+							<string>punctuation.property.observer.end.swift</string>
 						</dict>
 					</dict>
-					<key>end</key>
-					<string>\}</string>
 					<key>name</key>
-					<string>meta.definition.property.observer.didset.swift</string>
-				</dict>
-				<key>property-observer-willset</key>
-				<dict>
-					<key>begin</key>
-					<string>willSet</string>
-					<key>beginCaptures</key>
-					<dict>
-						<key>0</key>
+					<string>meta.definition.property.observer.${1:/downcase}.swift</string>
+					<key>patterns</key>
+					<array>
 						<dict>
-							<key>name</key>
-							<string>storage.type.proprty.observer.${0:/downcase}.swift</string>
+							<key>include</key>
+							<string>$self</string>
 						</dict>
-					</dict>
-					<key>end</key>
-					<string>\}</string>
-					<key>name</key>
-					<string>meta.definition.property.observer.willset.swift</string>
+					</array>
 				</dict>
 			</dict>
 		</dict>
