@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>defer</string>
 	<key>scope</key>
-	<string>meta.definition.function &amp; source.swift</string>
+	<string>source.swift &amp; (meta.definition.function.body | meta.definition.property.body)</string>
 	<key>tabTrigger</key>
 	<string>defer</string>
 	<key>uuid</key>

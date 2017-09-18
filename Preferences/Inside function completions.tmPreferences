@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Inside function completions</string>
 	<key>scope</key>
-	<string>meta.definition.function.body.swift</string>
+	<string>meta.definition.function.body.swift, meta.definition.function.body.swift, meta.definition.property.body.swift</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>

@@ -14,7 +14,7 @@
 	<key>scope</key>
 	<string>source.swift &amp; (meta.definition.type.enum | meta.definition.type.extension)</string>
 	<key>tabTrigger</key>
-	<string>evar</string>
+	<string>vare</string>
 	<key>uuid</key>
 	<string>8749DA88-DBDF-437C-89BC-48AE3387A9E0</string>
 </dict>

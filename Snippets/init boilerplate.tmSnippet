@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>self.$1 = $1</string>
+	<string>.$1 = $1</string>
+	<key>keyEquivalent</key>
+	<string>.</string>
 	<key>name</key>
 	<string>init assignment boilerplate</string>
 	<key>scope</key>
-	<string>source.swift</string>
-	<key>tabTrigger</key>
-	<string>init</string>
+	<string>meta.definition.function.initializer.swift &amp; L:variable.language.swift</string>
 	<key>uuid</key>
 	<string>1FC62928-9313-42F9-B64A-66488CF37DED</string>
 </dict>

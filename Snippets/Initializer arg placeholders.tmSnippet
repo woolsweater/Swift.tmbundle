@@ -5,9 +5,9 @@
 	<key>content</key>
 	<string>$1: $1${2:,}</string>
 	<key>name</key>
-	<string>Initializer arg placeholders</string>
+	<string>Arg placeholders</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.function-call.swift</string>
 	<key>tabTrigger</key>
 	<string>arg</string>
 	<key>uuid</key>

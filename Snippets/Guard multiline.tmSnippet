@@ -12,7 +12,7 @@
 	<key>name</key>
 	<string>guard multiline</string>
 	<key>scope</key>
-	<string>source.swift &amp; meta.definition</string>
+	<string>meta.definition.function.body.swift, meta.definition.function.test.body.swift, meta.definition.property.body.swift</string>
 	<key>tabTrigger</key>
 	<string>guardm</string>
 	<key>uuid</key>

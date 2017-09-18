@@ -10,7 +10,7 @@
 	<key>name</key>
 	<string>Lazy computed var</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.type.body.swift</string>
 	<key>tabTrigger</key>
 	<string>lazy</string>
 	<key>uuid</key>

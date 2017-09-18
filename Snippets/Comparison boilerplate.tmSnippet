@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>Comparison boilerplate</string>
 	<key>scope</key>
-	<string>source.swift</string>
+	<string>meta.definition.function.body.swift</string>
 	<key>tabTrigger</key>
 	<string>cmp</string>
 	<key>uuid</key>

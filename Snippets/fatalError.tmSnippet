@@ -7,7 +7,7 @@
 	<key>name</key>
 	<string>fatalError</string>
 	<key>scope</key>
-	<string>meta.definition.function &amp; source.swift</string>
+	<string>(meta.definition.function | meta.definition.property) &amp; source.swift</string>
 	<key>tabTrigger</key>
 	<string>fatal</string>
 	<key>uuid</key>

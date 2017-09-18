@@ -12,6 +12,12 @@
 
 	    )
 	</string>
+		<key>settings.increaseIndentPattern</key>
+		<string>(?x)
+	    (   \{ (?! .* \} ) .*
+	    |   \[ (?! .* \] ) .*
+	    |   (case\s+\S+\s*|default):
+	    )   \s* (/[/*] .*)? $</string>
 	</dict>
 	<key>isDelta</key>
 	<true/>

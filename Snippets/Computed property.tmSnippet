@@ -11,7 +11,7 @@
 	<key>scope</key>
 	<string>source.swift &amp; meta.definition.type</string>
 	<key>tabTrigger</key>
-	<string>cvar</string>
+	<string>varc</string>
 	<key>uuid</key>
 	<string>831F5703-D321-45AF-87AB-9AF5454C5DBC</string>
 </dict>

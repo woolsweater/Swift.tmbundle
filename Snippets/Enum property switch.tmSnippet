@@ -10,7 +10,7 @@
 	<key>name</key>
 	<string>Enum property switch</string>
 	<key>scope</key>
-	<string>meta.definition.type.enum.swift,meta.definition.type.extension.swift</string>
+	<string>(meta.definition.type.enum.swift | meta.definition.type.extension.swift) &amp; (meta.definition.function.body.swift | meta.definition.property.body.swift</string>
 	<key>tabTrigger</key>
 	<string>eswitch</string>
 	<key>uuid</key>
