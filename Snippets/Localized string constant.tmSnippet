@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>/** $1 */
-static let $2 = localizedString("$TM_FILENAME: ${3:$2}")</string>
+	<string>${1:/** $2 */}
+static let $3 = localizedString("$TM_FILENAME: ${4:${3/./\u$0/}}")</string>
 	<key>name</key>
 	<string>Localized string constant</string>
 	<key>scope</key>

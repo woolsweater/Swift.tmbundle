@@ -17,6 +17,7 @@
 			<string>return</string>
 			<string>isEmpty</string>
 			<string>default</string>
+			<string>assert</string>
 		</array>
 	</dict>
 	<key>uuid</key>
