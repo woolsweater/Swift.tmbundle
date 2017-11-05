@@ -609,7 +609,14 @@
 		<key>repository.declarations.repository.property</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(?:(static|class)\s+)?(var)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([-\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?!.,: ]+))?\s*(=((?=\s*\{)|\s*[^{]*$|\s*\S.*?(?=\{)))?</string>
+			<string>(?x)
+						\b(?:(static|class)\s+)?
+						(var)\s+
+						((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]+(\k&lt;q1&gt;))\s*
+                        (?=(:|=))  (?# Must have at least one of type or initializer)
+						(:\s*([^=]+)\s*)?
+						(=((?=\s*\{)|\s*\S.*$))?
+					</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -621,6 +628,18 @@
 				<dict>
 					<key>name</key>
 					<string>storage.modifier.property.swift</string>
+				</dict>
+				<key>10</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.property.initializer.swift</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#expressions</string>
+						</dict>
+					</array>
 				</dict>
 				<key>2</key>
 				<dict>
@@ -641,18 +660,6 @@
 						<dict>
 							<key>include</key>
 							<string>#available-types</string>
-						</dict>
-					</array>
-				</dict>
-				<key>8</key>
-				<dict>
-					<key>name</key>
-					<string>entity.other.property.initializer.swift</string>
-					<key>patterns</key>
-					<array>
-						<dict>
-							<key>include</key>
-							<string>#expressions</string>
 						</dict>
 					</array>
 				</dict>
@@ -889,6 +896,70 @@
 				</dict>
 			</array>
 		</dict>
+		<key>repository.declarations.repository.type-enum.patterns</key>
+		<array>
+			<dict>
+				<key>include</key>
+				<string>#comments</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#generic-parameter-clause</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>Swift 3: generic constraints after the generic param list</string>
+				<key>include</key>
+				<string>#generic-where-clause</string>
+			</dict>
+			<dict>
+				<key>include</key>
+				<string>#inheritance-clause</string>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>\{</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.type.begin.swift</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>\}</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.type.end.swift</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>meta.definition.type.body.swift</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#enum-case-clause</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#property</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>#property-constant</string>
+					</dict>
+					<dict>
+						<key>include</key>
+						<string>$self</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<key>repository.declarations.repository.type.patterns</key>
 		<array>
 			<dict>
