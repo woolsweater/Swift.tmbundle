@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Indent nested types</string>
+	<key>scope</key>
+	<string>source.swift meta.definition.type.body meta.definition.type entity.name.type</string>
+	<key>settings</key>
+	<dict>
+		<key>symbolTransformation</key>
+		<string>
+		s/.*/	$0/;
+	</string>
+	</dict>
+	<key>uuid</key>
+	<string>C46151F4-1EDD-4058-ABAB-DFE3CEA9A0DC</string>
+</dict>
+</plist>

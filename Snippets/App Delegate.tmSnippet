@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>import UIKit
+
+@UIApplicationMain
+class ${1:AppDelegate} : UIResponder, UIApplicationDelegate${WSS_ALLMAN_BRACES/(NO|false|0)|(.*)/(?1: :\n)/i}{
+
+    typealias LaunchOptions = [UIApplicationLaunchOptionsKey : Any]
+
+    var window: UIWindow?
+
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions options: LaunchOptions?)
+        -&gt; Bool
+    {
+        $0return true
+    }
+}
+</string>
+	<key>name</key>
+	<string>App Delegate</string>
+	<key>scope</key>
+	<string>source.swift</string>
+	<key>tabTrigger</key>
+	<string>appdelegate</string>
+	<key>uuid</key>
+	<string>9023F822-7D3B-4412-8610-8471F1D094DA</string>
+</dict>
+</plist>

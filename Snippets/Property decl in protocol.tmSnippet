@@ -6,7 +6,7 @@
 	<string>/**
 $WSS_COMMENT_BLOCK_CONTINUE $1
  */
-var ${2:name}: ${3:Type} { get ${4:set}}</string>
+var ${2:name}: ${3:Type} { get ${4:set }}</string>
 	<key>name</key>
 	<string>Property decl in protocol</string>
 	<key>scope</key>

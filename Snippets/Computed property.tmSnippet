@@ -9,7 +9,7 @@
 	<key>name</key>
 	<string>Computed property</string>
 	<key>scope</key>
-	<string>source.swift &amp; meta.definition.type</string>
+	<string>source.swift &amp; meta.definition.type - meta.definition.type.protocol</string>
 	<key>tabTrigger</key>
 	<string>var</string>
 	<key>uuid</key>

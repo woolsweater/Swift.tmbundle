@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>DispatchQueue.${1|main,global(),global(qos: .background),global(qos: .userInitiated),global(qos: .userInteractive)|}.async {
+    $0
+}</string>
+	<key>name</key>
+	<string>DispatchQueue async</string>
+	<key>scope</key>
+	<string>meta.definition.function.body.swift</string>
+	<key>tabTrigger</key>
+	<string>async</string>
+	<key>uuid</key>
+	<string>5770EE1E-619B-48DB-B931-8A33BBCEB47D</string>
+</dict>
+</plist>

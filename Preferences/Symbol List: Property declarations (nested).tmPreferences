@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Property declarations (nested)</string>
+	<key>scope</key>
+	<string>source.swift meta.definition.type.body meta.definition.type meta.definition.property.header</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<true/>
+		<key>symbolTransformation</key>
+		<string>
+		s/\s+/ /g;
+		s/((static|class) )?(var|let)/		$0/;
+		# Strip initializer if explicit type
+		s/(:\s*[\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?]+)\s*=.*$/$1/;
+		# Infer type if possible
+		s/((?:var|let)[^:]+(?!:\s*[\p{L}_\p{N}\p{M}]+))(\s*=\s*(?:true|false))/$1: «Bool»/;
+		s/((?:var|let)[^:]+(?!:\s*[\p{L}_\p{N}\p{M}]+))(\s*=\s*\d+\.\d*)/$1: «Float»/;
+		s/((?:var|let)[^:]+(?!:\s*[\p{L}_\p{N}\p{M}]+))(\s*=\s*\d+)/$1: «Int»/;
+		s/((?:var|let)[^:]+(?!:\s*[\p{L}_\p{N}\p{M}]+))(\s*=\s*\".*$)/$1: «String»/;
+		s/((?:var|let)[^:]+(?!:\s*[\p{L}_\p{N}\p{M}]+))(\s*=\s*\[.*?(:)?.*?((\])|$))/$1: (?3:«Dictonary»:(?5:«Array»:«Collection»))/;		 
+	</string>
+	</dict>
+	<key>uuid</key>
+	<string>DA9CD772-B49B-47A2-842E-41A9B8CFF760</string>
+</dict>
+</plist>

@@ -4,6 +4,213 @@
 <dict>
 	<key>changed</key>
 	<dict>
+		<key>repository.comments.patterns</key>
+		<array>
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.comment.swift</string>
+					</dict>
+				</dict>
+				<key>match</key>
+				<string>\A^(#!).*$\n?</string>
+				<key>name</key>
+				<string>comment.line.number-sign.swift</string>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>/\*\*(?!/)</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.comment.begin.swift</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>\*/</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.comment.end.swift</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>comment.block.documentation.swift</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#nested</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>/\*:</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.comment.begin.swift</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>\*/</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.comment.end.swift</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>comment.block.documentation.playground.swift</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#nested</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>/\*</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.comment.begin.swift</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>\*/</string>
+				<key>endCaptures</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.definition.comment.end.swift</string>
+					</dict>
+				</dict>
+				<key>name</key>
+				<string>comment.block.swift</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>include</key>
+						<string>#nested</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\*/</string>
+				<key>name</key>
+				<string>invalid.illegal.unexpected-end-of-block-comment.swift</string>
+			</dict>
+			<dict>
+				<key>begin</key>
+				<string>(^[ \t]+)?(?=//)</string>
+				<key>beginCaptures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.whitespace.comment.leading.swift</string>
+					</dict>
+				</dict>
+				<key>end</key>
+				<string>(?!\G)</string>
+				<key>patterns</key>
+				<array>
+					<dict>
+						<key>begin</key>
+						<string>///</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.comment.swift</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>^</string>
+						<key>name</key>
+						<string>comment.line.triple-slash.documentation.swift</string>
+					</dict>
+					<dict>
+						<key>begin</key>
+						<string>//:</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.comment.swift</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>^</string>
+						<key>name</key>
+						<string>comment.line.double-slash.documentation.swift</string>
+					</dict>
+					<dict>
+						<key>begin</key>
+						<string>(//) ?(MARK|TODO|FIXME): ?(-)?</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>1</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.comment.swift</string>
+							</dict>
+							<key>2</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.comment.kind.swift</string>
+							</dict>
+							<key>3</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.comment.hrule.swift</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>^</string>
+						<key>name</key>
+						<string>comment.line.double-slash.${2:/downcase}.swift</string>
+					</dict>
+					<dict>
+						<key>begin</key>
+						<string>//</string>
+						<key>beginCaptures</key>
+						<dict>
+							<key>0</key>
+							<dict>
+								<key>name</key>
+								<string>punctuation.definition.comment.swift</string>
+							</dict>
+						</dict>
+						<key>end</key>
+						<string>^</string>
+						<key>name</key>
+						<string>comment.line.double-slash.swift</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<key>repository.declarations.repository.extension.patterns</key>
 		<array>
 			<dict>
@@ -402,7 +609,7 @@
 		<key>repository.declarations.repository.property</key>
 		<dict>
 			<key>begin</key>
-			<string>\b(?:(static|class)\s+)?(var)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?!]+))?\s*(=((?=\s*\{)|\s*[^{\s][^{]*$|\s*\S.*?(?=\{)))?</string>
+			<string>\b(?:(static|class)\s+)?(var)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([-\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?!.,: ]+))?\s*(=((?=\s*\{)|\s*[^{]*$|\s*\S.*?(?=\{)))?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -660,7 +867,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(?:(static|class)\s+)?(let)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?]+))?\s*(=((?=\s*\{)|\s*\S.*$))?</string>
+			<string>\b(?:(static|class)\s+)?(let)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?!.,:]+))?\s*(=((?=\s*\{)|\s*\S.*$))?</string>
 			<key>name</key>
 			<string>meta.definition.property.constant.swift</string>
 		</dict>

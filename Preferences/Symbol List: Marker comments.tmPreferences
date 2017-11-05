@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Symbol List: Marker comments</string>
+	<key>scope</key>
+	<string>comment.line.double-slash.mark.swift</string>
+	<key>settings</key>
+	<dict>
+		<key>showInSymbolList</key>
+		<true/>
+		<key>symbolTransformation</key>
+		<string>
+		s/\/\/ ?MARK: ?(-)?\s*(.*)(\s+)?$/$1(?1:--------:~~)$2(?1:--------:~~)/;
+	</string>
+	</dict>
+	<key>uuid</key>
+	<string>32150845-AFD0-4690-8F71-E68E426E05D7</string>
+</dict>
+</plist>
