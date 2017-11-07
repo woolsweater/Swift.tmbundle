@@ -614,7 +614,7 @@
 						(var)\s+
 						((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]+(\k&lt;q1&gt;))\s*
                         (?=(:|=))  (?# Must have at least one of type or initializer)
-						(:\s*([^=]+)\s*)?
+						(:\s*([^={]+)\s*)?
 						(=((?=\s*\{)|\s*\S.*$))?
 					</string>
 			<key>beginCaptures</key>
