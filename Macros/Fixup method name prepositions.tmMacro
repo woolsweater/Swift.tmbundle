@@ -54,7 +54,7 @@
 	<key>name</key>
 	<string>Fixup method name prepositions</string>
 	<key>scope</key>
-	<string>entity.name.function.swift</string>
+	<string>source.swift</string>
 	<key>uuid</key>
 	<string>B57DC7B8-E1E3-4414-B446-4A7220BC9A1C</string>
 </dict>

@@ -10,7 +10,7 @@ static let $1 = "$2"</string>
 	<key>scope</key>
 	<string>meta.definition.type.body.swift</string>
 	<key>tabTrigger</key>
-	<string>key</string>
+	<string>const</string>
 	<key>uuid</key>
 	<string>7020290E-B7EC-44ED-8271-88B0D2391658</string>
 </dict>

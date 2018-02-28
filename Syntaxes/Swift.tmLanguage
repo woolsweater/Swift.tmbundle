@@ -615,7 +615,7 @@
 						((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]+(\k&lt;q1&gt;))\s*
                         (?=(:|=))  (?# Must have at least one of type or initializer)
 						(:\s*([^={]+)\s*)?
-						(=((?=\s*\{)|\s*\S.*$))?
+						(=((?=\s*\{)|\s*\S.*$|$))?
 					</string>
 			<key>beginCaptures</key>
 			<dict>
@@ -964,7 +964,7 @@
 		<array>
 			<dict>
 				<key>begin</key>
-				<string>\b(class(?!\s+(?:func|var|let)\b))\s+((?&lt;q&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q&gt;))(?:\s*:\s*\p{Upper}{2,}TestCase)</string>
+				<string>\b(class(?!\s+(?:func|var|let)\b))\s+((?&lt;q&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q&gt;))(?:\s*:\s*\p{Upper}{2,}[\p{L}_\p{N}\p{M}]*TestCase)</string>
 				<key>beginCaptures</key>
 				<dict>
 					<key>1</key>
