@@ -831,6 +831,10 @@
 							<key>include</key>
 							<string>#property-initializer-closure</string>
 						</dict>
+						<dict>
+							<key>include</key>
+							<string>#property-initializer-multiline-string</string>
+						</dict>
 					</array>
 				</dict>
 				<key>1</key>
@@ -874,7 +878,16 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(?:(static|class)\s+)?(let)\s+((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*(:\s*([\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?!.,:]+))?\s*(=((?=\s*\{)|\s*\S.*$))?</string>
+			<string>(?x)
+                        \b(?:(static|class)\s+)?
+                        (let)\s+
+                        ((?&lt;q1&gt;`?)[\p{L}_][\p{L}_\p{N}\p{M}]*(\k&lt;q1&gt;))\s*
+                        (?=(:|=))  (?# Must have at least one of type or initializer)
+                        (:\s*([\p{L}_\p{N}\p{M}\[\]&lt;&gt;\(\)?!.,:]+))?\s*
+                        (=\s*((?=\{)|
+                              (?=""")|
+                              \S.*))?
+                    </string>
 			<key>name</key>
 			<string>meta.definition.property.constant.swift</string>
 		</dict>
@@ -893,6 +906,24 @@
 				<dict>
 					<key>include</key>
 					<string>$self</string>
+				</dict>
+			</array>
+		</dict>
+		<key>repository.declarations.repository.property-initializer-multiline-string</key>
+		<dict>
+			<key>begin</key>
+			<string>(?&lt;==)\G\s*(?=""")</string>
+			<key>comment</key>
+			<string>Having a scope specifically for constant properties initialized by a multiline string is required since the constant property is expressed as a single-line match</string>
+			<key>end</key>
+			<string>(?&lt;=""")\G</string>
+			<key>name</key>
+			<string>entity.other.property.initializer.multiline-string.swift</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>#string</string>
 				</dict>
 			</array>
 		</dict>
@@ -1143,6 +1174,150 @@
 			<dict>
 				<key>include</key>
 				<string>#type-enum</string>
+			</dict>
+		</array>
+		<key>repository.keywords.patterns</key>
+		<array>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:if|else|guard|where|switch|case|default|fallthrough)\b</string>
+				<key>name</key>
+				<string>keyword.control.branch.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:continue|break|fallthrough|return)\b</string>
+				<key>name</key>
+				<string>keyword.control.transfer.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:while|for|in)\b</string>
+				<key>name</key>
+				<string>keyword.control.loop.swift</string>
+			</dict>
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>keyword.control.loop.swift</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.whitespace.trailing.repeat.swift</string>
+					</dict>
+				</dict>
+				<key>comment</key>
+				<string>extra scopes for repeat-while snippet</string>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(repeat)\b(\s*)</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\bdefer\b</string>
+				<key>name</key>
+				<string>keyword.control.defer.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:catch|throws?|rethrows|try)\b|\btry[?!]\B</string>
+				<key>name</key>
+				<string>keyword.control.exception.swift</string>
+			</dict>
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>keyword.control.exception.swift</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>punctuation.whitespace.trailing.do.swift</string>
+					</dict>
+				</dict>
+				<key>comment</key>
+				<string>extra scopes for do-catch snippet</string>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(do)\b(\s*)</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:associatedtype|let|operator|typealias|var)\b</string>
+				<key>name</key>
+				<string>keyword.other.declaration-specifier.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(class|enum|extension|precedencegroup|protocol|struct)\b</string>
+				<key>name</key>
+				<string>storage.type.$1.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:inout|static|final|lazy|mutating|nonmutating|optional|indirect|required|override|dynamic|convenience|infix|prefix|postfix)\b</string>
+				<key>name</key>
+				<string>storage.modifier.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\binit[?!]|\binit\b|(?&lt;!\.)\b(?:func|deinit|subscript|didSet|get|set|willSet)\b</string>
+				<key>name</key>
+				<string>storage.type.function.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:fileprivate|private|internal|public|open)\b</string>
+				<key>name</key>
+				<string>keyword.other.declaration-specifier.accessibility.swift</string>
+			</dict>
+			<dict>
+				<key>comment</key>
+				<string>matches weak, unowned, unowned(safe), unowned(unsafe)</string>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(?:weak|unowned)\b|\bunowned\((?:safe|unsafe)\)</string>
+				<key>name</key>
+				<string>keyword.other.capture-specifier.swift</string>
+			</dict>
+			<dict>
+				<key>captures</key>
+				<dict>
+					<key>1</key>
+					<dict>
+						<key>name</key>
+						<string>keyword.operator.type.swift</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>name</key>
+						<string>keyword.operator.type.metatype.swift</string>
+					</dict>
+				</dict>
+				<key>match</key>
+				<string>(?&lt;=\.)(?:(dynamicType|self)|(Protocol|Type))\b</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\b(super|self|Self)\b</string>
+				<key>name</key>
+				<string>variable.language.$1.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>\B(?:#file|#line|#column|#function|#dsohandle)\b|\b(?:__FILE__|__LINE__|__COLUMN__|__FUNCTION__|__DSO_HANDLE__)\b</string>
+				<key>name</key>
+				<string>support.variable.swift</string>
+			</dict>
+			<dict>
+				<key>match</key>
+				<string>(?&lt;!\.)\bimport\b</string>
+				<key>name</key>
+				<string>keyword.control.import.swift</string>
 			</dict>
 		</array>
 	</dict>

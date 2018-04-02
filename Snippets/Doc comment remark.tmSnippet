@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string> - remark: $0</string>
+	<string>$WSS_COMMENT_BLOCK_CONTINUE - remark: $0</string>
 	<key>name</key>
 	<string>Doc comment remark</string>
 	<key>scope</key>

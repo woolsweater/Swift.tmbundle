@@ -3,14 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>.$1 = $1</string>
+	<string>.init(${1:${2:value}: $2})</string>
 	<key>keyEquivalent</key>
 	<string>.</string>
 	<key>name</key>
-	<string>init assignment boilerplate</string>
+	<string>super init call</string>
 	<key>scope</key>
-	<string>meta.definition.function.initializer.swift &amp; L:variable.language.self.swift</string>
+	<string>meta.definition.function.initializer.swift &amp; L:variable.language.super.swift</string>
 	<key>uuid</key>
-	<string>1FC62928-9313-42F9-B64A-66488CF37DED</string>
+	<string>CFA56A1F-4862-4907-988B-FD1827A8A73E</string>
 </dict>
 </plist>
